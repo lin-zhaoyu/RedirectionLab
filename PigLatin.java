@@ -1,16 +1,17 @@
 import java.util.*;
 public class PigLatin{
   public static void main(String[] args){
-    
-    System.out.println(pigLatinBest("*emu"));
-    System.out.println(pigLatinBest("4chan"));
-    System.out.println(pigLatinBest("fish!"));
-    System.out.println(pigLatinBest("fish"));
-    System.out.println(pigLatinBest("the."));
-    System.out.println(pigLatinBest("cat!"));
-    System.out.println(pigLatinBest("amazing?"));
-    System.out.println(pigLatinBest("apple%"));
-
+    Scanner n = new Scanner(System.in);
+    while(n.hasNext()){
+      Scanner line = new Scanner(n.nextLine());
+      while(line.hasNext()){
+        String s = line.next();
+        String temp = "";
+        temp += pigLatinBest(s);
+        System.out.print(temp + " ");
+      }
+      System.out.println();
+  }
   }
 
   public static String pigLatinSimple(String s){
